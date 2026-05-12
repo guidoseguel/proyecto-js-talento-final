@@ -1,0 +1,206 @@
+/* Configuracion basica y reseteo de espacios */
+html,
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+section,
+div,
+header,
+footer,
+main,
+nav,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fbe9eb;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Contenido principal con espacio a los costados */
+main {
+  flex: 1;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+/* Barra de navegacion */
+header {
+  background-color: #222;
+  padding: 25px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header li {
+  margin-left: 25px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  color: orange;
+}
+
+/* Seccion de productos y tarjetas */
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: white;
+  width: 300px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 170px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el formulario de contacto */
+.seccion-contacto {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: #fffbe6;
+  padding: 50px;
+  border-radius: 30px;
+  border: 1px solid orange;
+  text-align: left;
+}
+
+.grupo-input {
+  margin-bottom: 25px;
+}
+
+.grupo-input label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.grupo-input input,
+.grupo-input textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Botones generales */
+.btn {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+}
+
+.bg-secondary {
+  background-color: orange;
+}
+
+.text-dark {
+  color: white;
+}
+
+/* Estilos del pie de pagina */
+footer {
+  background-color: #fffbe6;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 60px;
+}
+
+.footer-info,
+.footer-top {
+  margin-bottom: 25px;
+  color: #666;
+  font-size: 14px;
+}
+
+.barra,
+.separador {
+  padding: 0 10px;
+  color: #ccc;
+}
+
+.footer-creditos,
+.footer-credits {
+  margin-bottom: 30px;
+  color: #e98a9d;
+  font-style: italic;
+}
+
+.nombre-autor {
+  color: #333;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Estilos de los links del footer para sacar el azul y el subrayado */
+footer a {
+  color: #b38b00;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  display: inline-block;
+}
+
+footer a:hover {
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Diseño para pantallas pequeñas */
+@media (max-width: 600px) {
+  main {
+    padding: 40px 5%;
+  }
+  footer a {
+    display: block;
+    margin-bottom: 15px;
+  }
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Rotiseria Yuumi</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="div-logo">
+        <a href="../index.html" class="logo">
+          <img
+            src="../img/logo-yuumi.png"
+            width="40"
+            height="40"
+            alt="Logo Pizzeria"
+          />
+        </a>
+      </div>
+      <nav class="nav-header">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="seccion-contacto">
+        <h2 class="text-secondary">Contactanos</h2>
+
+        <form action="#" method="POST" class="form-contacto">
+          <div class="grupo-input">
+            <label for="nombre">Tu nombre:</label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              placeholder="Tu nombre"
+              required
+            />
+          </div>
+
+          <div class="grupo-input">
+            <label for="email">Tu correo:</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="tu@email.com"
+              required
+            />
+          </div>
+
+          <div class="grupo-input">
+            <label for="mensaje">Tu mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="¿En qué podemos ayudar?"
+            ></textarea>
+          </div>
+
+          <button class="btn bg-secondary text-dark" type="submit">
+            Enviar mensaje
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-info">
+        <span> San Miguel, Buenos Aires, Argentina</span>
+        <span class="barra">|</span>
+        <span> contacto@rotiseriayuumi.com</span>
+        <span class="barra">|</span>
+        <span> Lun-Sáb 19:00 - 00:00</span>
+      </div>
+
+      <div class="footer-creditos">
+        <p>
+          Hecho por
+          <span class="nombre-autor">Guido Seguel</span> ·Para Talento Tech
+        </p>
+      </div>
+
+      <nav class="footer-nav-final">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html">Productos</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+    </footer>
+  </body>
+</html>
