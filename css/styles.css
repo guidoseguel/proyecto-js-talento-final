@@ -204,3 +204,77 @@ footer a:hover {
     gap: 15px;
   }
 }
+
+/* =========================================
+   ESTILOS DEL CARRITO DE COMPRAS
+   ========================================= */
+
+.carrito-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carrito-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.carrito-items {
+  margin-bottom: 25px;
+}
+
+.item-carrito-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.item-carrito-lista strong {
+  color: #f7a000;
+  font-size: 1.2rem;
+}
+
+.carrito-total {
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #222;
+  padding-top: 15px;
+  border-top: 2px solid #333;
+}
+
+.btn-finalizar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #f7a000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.btn-finalizar:hover {
+  background-color: #e69500;
+}
+
+.btn-finalizar:active {
+  transform: scale(0.98);
+}

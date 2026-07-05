@@ -3,20 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rotiseria yuumi</title>
+    <title>Rotiseria Yuumi</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header>
       <div class="div-logo">
         <a href="./index.html" class="logo">
-          <img src="./img/logo-yuumi.png" width="40" height="40" />
+          <img
+            src="./img/logo-yuumi.png"
+            width="40"
+            height="40"
+            alt="Logo Pizzeria"
+          />
         </a>
       </div>
       <nav class="nav-header">
         <ul>
           <li><a href="./index.html">Inicio</a></li>
           <li><a href="./pages/contacto.html">Contacto</a></li>
+          <li>
+            <a href="./pages/carrito.html" class="carrito-icono"
+              >🛒 <span id="contador-carrito">0</span></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -30,29 +40,7 @@
       <section>
         <h2 class="titulo-productos">Nuestros Productos</h2>
 
-        <div class="contenedor-tarjetas">
-          <article class="card text-secondary">
-            <img src="./img/pizza-napo.jpg" alt="pizza napolitana" />
-            <h3>Pizza napo</h3>
-            <p><strong>PRECIO: 12,000</strong></p>
-            <button class="btn bg-secondary text-dark">
-              Agregar al carrito
-            </button>
-          </article>
-
-          <article class="card text-secondary">
-            <img
-              src="./img/pizza-jamon-morron.jpg"
-              alt="pizza jamon y morron"
-            />
-            <h3>Pizza jamon y morron</h3>
-
-            <p><strong>PRECIO: 13,000</strong></p>
-            <button class="btn bg-secondary text-dark">
-              Agregar al carrito
-            </button>
-          </article>
-        </div>
+        <div class="contenedor-tarjetas" id="contenedor-pizzas"></div>
       </section>
     </main>
 
@@ -66,7 +54,7 @@
       </div>
 
       <div class="footer-credits">
-        <p>Hecho con por <strong>Guido Seguel</strong> · Talento Tech</p>
+        <p>Hecho por <strong>Guido Seguel</strong> · Talento Tech</p>
       </div>
 
       <nav class="footer-nav">
@@ -75,5 +63,11 @@
         <a href="./pages/contacto.html">Contacto</a>
       </nav>
     </footer>
+
+  <script src="./js/storage.js"></script>
+    <script src="./js/ui.js"></script>
+    <script src="./js/funcionesCarrito.js"></script>
+    <script src="./js/index.js"></script>
   </body>
+</html>
 </html>

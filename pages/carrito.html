@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito de Compra - Rotiseria Yuumi</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="div-logo">
+        <a href="../index.html" class="logo">
+          <img
+            src="../img/logo-yuumi.png"
+            width="40"
+            height="40"
+            alt="Logo Pizzeria"
+          />
+        </a>
+      </div>
+      <nav class="nav-header">
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="./carrito.html">Carrito</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="carrito-container">
+        <h2 class="text-secondary">Tu Carrito de Compra</h2>
+
+        <div class="carrito-items"></div>
+
+        <div class="carrito-total">
+          <p>Total: $<span id="total">0.00</span></p>
+          <button id="checkout-button" class="btn-finalizar">
+            Finalizar Compra
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-info">
+        <span> San Miguel, Buenos Aires, Argentina</span>
+        <span class="barra">|</span>
+        <span> contacto@rotiseriayuumi.com</span>
+        <span class="barra">|</span>
+        <span> Lun-Sáb 19:00 - 00:00</span>
+      </div>
+
+      <div class="footer-creditos">
+        <p>
+          Hecho por
+          <span class="nombre-autor">Guido Seguel</span> ·Para Talento Tech
+        </p>
+      </div>
+
+      <nav class="footer-nav-final">
+        <a href="../index.html">Inicio</a>
+        <a href="../index.html">Productos</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+    </footer>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/funcionesCarrito.js"></script>
+    <script src="../js/carrito.js"></script>
+  </body>
+</html>
