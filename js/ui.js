@@ -7,7 +7,7 @@ function mostrarPizzas(pizzas, contenedor) {
     tarjeta.classList.add("card", "text-secondary");
 
     tarjeta.innerHTML = `
-            <img src="${pizza.img}" alt="${pizza.nombre}">
+            <img src="${pizza.imagen}" alt="${pizza.nombre}">
             <h3>${pizza.nombre}</h3>
             <p class="precio">$${pizza.precio}</p>
             <button class="agregar-carrito btn bg-secondary text-dark" id="btn-${pizza.id}">

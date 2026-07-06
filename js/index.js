@@ -1,10 +1,4 @@
 const contenedorPizzas = document.getElementById("contenedor-pizzas");
-const contadorCarrito = document.getElementById("contador-carrito");
-let carrito = obtenerCarrito();
-
-if (contadorCarrito) {
-  contadorCarrito.innerText = carrito.length;
-}
 
 async function cargarPizzas() {
   try {
@@ -17,7 +11,7 @@ async function cargarPizzas() {
       const botonAgregar = document.getElementById(`btn-${pizza.id}`);
       if (botonAgregar) {
         botonAgregar.addEventListener("click", () => {
-          agregarAlCarrito(pizza, carrito, contadorCarrito);
+          agregarAlCarrito(pizza);
         });
       }
     });

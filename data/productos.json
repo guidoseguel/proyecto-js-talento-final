@@ -3,12 +3,12 @@
     "id": 1,
     "nombre": "Pizza Napolitana",
     "precio": 12000,
-    "img": "./img/pizza-napo.jpg"
+    "imagen": "./img/pizza-napo.jpg"
   },
   {
     "id": 2,
     "nombre": "Pizza jamon y morron",
     "precio": 13000,
-    "img": "./img/pizza-jamon-morron.jpg"
+    "imagen": "./img/pizza-jamon-morron.jpg"
   }
 ]
