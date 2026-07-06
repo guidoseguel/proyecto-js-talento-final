@@ -1,4 +1,4 @@
-/* Configuracion basica y reseteo de espacios */
+/* Le saco los margenes que vienen por defecto en el navegador para que no jodan */
 html,
 body,
 h1,
@@ -18,6 +18,7 @@ article {
   padding: 0;
 }
 
+/* Configuracion base para toda la pagina */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fbe9eb;
@@ -28,14 +29,14 @@ body {
   line-height: 1.6;
 }
 
-/* Contenido principal con espacio a los costados */
+/* Acomodando el cuerpo principal para que tenga aire a los costados */
 main {
   flex: 1;
   padding: 80px 10%;
   text-align: center;
 }
 
-/* Barra de navegacion */
+/* La barra de navegacion de arriba de todo */
 header {
   background-color: #222;
   padding: 25px 5%;
@@ -63,7 +64,7 @@ header a:hover {
   color: orange;
 }
 
-/* Seccion de productos y tarjetas */
+/* Aca le doy estilo a la cuadricula de las pizzas */
 .contenedor-tarjetas {
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +73,7 @@ header a:hover {
   margin-top: 30px;
 }
 
+/* Las tarjetitas de los productos individuales */
 .card {
   background-color: white;
   width: 300px;
@@ -81,6 +83,7 @@ header a:hover {
   transition: 0.3s;
 }
 
+/* Efecto piola cuando le paso el mouse por encima a la pizza */
 .card:hover {
   transform: scale(1.05);
 }
@@ -93,7 +96,7 @@ header a:hover {
   margin-bottom: 20px;
 }
 
-/* Estilos para el formulario de contacto */
+/* Dejando facherito el formulario de contacto */
 .seccion-contacto {
   max-width: 550px;
   margin: 0 auto;
@@ -122,7 +125,7 @@ header a:hover {
   border: 1px solid #ccc;
 }
 
-/* Botones generales */
+/* Botones generales de la pagina */
 .btn {
   padding: 15px;
   cursor: pointer;
@@ -141,7 +144,7 @@ header a:hover {
   color: white;
 }
 
-/* Estilos del pie de pagina */
+/* Acomodando el footer para que quede abajo prolijo */
 footer {
   background-color: #fffbe6;
   padding: 60px 20px;
@@ -189,23 +192,8 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Diseño para pantallas pequeñas */
-@media (max-width: 600px) {
-  main {
-    padding: 40px 5%;
-  }
-  footer a {
-    display: block;
-    margin-bottom: 15px;
-  }
-  header {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
 /* =========================================
-   ESTILOS DEL CARRITO DE COMPRAS
+   TODA LA LOGICA VISUAL DEL CARRITO
    ========================================= */
 
 .carrito-container {
@@ -252,6 +240,7 @@ footer a:hover {
   border-top: 2px solid #333;
 }
 
+/* Boton gigante para terminar de comprar */
 .btn-finalizar {
   display: block;
   width: 100%;
@@ -278,7 +267,7 @@ footer a:hover {
   transform: scale(0.98);
 }
 
-/* EL DISEÑO DE LA TARJETA COMPLETA (VERSIÓN PRO) */
+/* El diseño del carrito para que quede modo pro (fotos, botones, etc) */
 .tarjeta-carrito {
   display: flex;
   justify-content: flex-start;
@@ -302,6 +291,7 @@ footer a:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Aca dejo redondas y facheras las fotitos del carrito */
 .img-carrito {
   width: 100px;
   height: 100px;
@@ -313,9 +303,15 @@ footer a:hover {
 
 .info-producto-carrito {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-grow: 1;
+  gap: 15px;
+}
+
+/* Le doy un minimo de ancho al nombre para que no se rompa todo */
+.detalle-producto {
+  flex: 1;
+  min-width: 120px;
 }
 
 .detalle-producto h4 {
@@ -330,6 +326,7 @@ footer a:hover {
   font-size: 0.9rem;
 }
 
+/* Controles de sumar y restar, agrupados piola */
 .controles-cantidad {
   display: flex;
   align-items: center;
@@ -367,8 +364,11 @@ footer a:hover {
   font-size: 1rem;
 }
 
+/* Aca me aseguro que los precios queden tirados a la derecha */
 .subtotal-producto {
   text-align: right;
+  font-weight: bold;
+  min-width: 90px;
 }
 
 .subtotal-producto p {
@@ -377,30 +377,7 @@ footer a:hover {
   color: #333;
 }
 
-.info-producto-carrito {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  gap: 15px;
-}
-
-.detalle-producto {
-  flex: 1;
-  min-width: 120px;
-}
-
-.controles-cantidad {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.subtotal-producto {
-  text-align: right;
-  font-weight: bold;
-  min-width: 90px;
-}
-
+/* Boton de eliminar que empuja al resto para acomodarse a la derecha */
 .btn-eliminar-item {
   background-color: #ff4d4d;
   color: white;
@@ -415,4 +392,73 @@ footer a:hover {
 
 .btn-eliminar-item:hover {
   background-color: #e60000;
+}
+
+/* =========================================
+   ACA ARREGLO EL QUILOMBO PARA QUE SE VEA BIEN EN MI MOTO G84 Y LOS CELUS
+   ========================================= */
+@media (max-width: 768px) {
+  /* Ajustes generales para pantallas chicas */
+  main {
+    padding: 40px 5%;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer a {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  /* Hago que las tarjetas se apilen para abajo en vez de estar de costado */
+  .tarjeta-carrito {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  /* Centro la fotito */
+  .img-carrito {
+    margin: 0 auto;
+  }
+
+  .info-producto-carrito {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  /* Me aseguro de centrar todos los textos */
+  .detalle-producto {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Que la cajita de cantidad no se estire al pedo ocupando toda la pantalla */
+  .controles-cantidad {
+    margin: 0 auto;
+    justify-content: center;
+    width: max-content;
+  }
+
+  .subtotal-producto {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Achico el boton de eliminar y lo centro para que no quede como una barra gigante */
+  .btn-eliminar-item {
+    margin: 10px auto 0 auto;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  /* Y por fin centro el total general que me quedaba colgado a la derecha */
+  .carrito-total {
+    text-align: center;
+  }
 }
